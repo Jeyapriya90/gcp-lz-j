@@ -3,4 +3,11 @@
   entrypoint: 'sh'
   args: 
   - '-c'
-  - terraform plan
+  - |
+        pwd
+        echo "run init"
+        terraform init
+        echo "run validate"
+        terraform validate
+        echo "run plan"
+        terraform plan -out terraform.plan
