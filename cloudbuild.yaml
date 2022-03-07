@@ -1,13 +1,14 @@
-- id: 'tf plan'
-  name: 'hashicorp/terraform:1.0.0'
-  entrypoint: 'sh'
+--- 
+- 
   args: 
-  - '-c'
-  - |
-      pwd
-      echo "run init"
-      terraform init
-      echo "run validate"
-      terraform validate
-      echo "run plan"
-      terraform plan -out terraform.plan
+    - "-c"
+    - "pwd\n\
+        echo \"run init\"\n\
+        terraform init\n\
+        echo \"run validate\"\n\
+        terraform validate\n\
+        echo \"run plan\"\n\
+        terraform plan "
+  entrypoint: sh
+  id: "tf plan"
+  name: "hashicorp/terraform:1.0.0"
